@@ -21,6 +21,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        ""
+        "curly": 2,
+        "no-debugger": 2,
+        "no-unreachable": 2
     }
 }
