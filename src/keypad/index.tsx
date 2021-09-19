@@ -6,19 +6,25 @@ interface KeyPadItemProps {
     readonly digit: string;
 }
 
-export const KeypadItem = (props: KeyPadItemProps) => {
+type OnClickEventHandler = void;
+
+export const KeypadItem = (props: KeyPadItemProps): JSX.Element => {
     const { digit } = props;
+
+    const onClick = (digit: string): OnClickEventHandler => {
+        console.log("you clicked on ", digit);
+    };
 
     return (
         <div className="keypad-item">
-            <p>{digit}</p>
+            <p onClick={() => onClick(digit)}>{digit}</p>
         </div>
     );
 };
 
-export const Keypad = () => {
+export const Keypad = (): JSX.Element => {
     const generateKeypad = () => {
-        return DIGITS.map((digit) => <KeypadItem digit={digit} />);
+        return DIGITS.map(digit => <KeypadItem key={digit} digit={digit} />);
     };
 
     return <div className="keypad">{generateKeypad()}</div>;
