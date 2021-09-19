@@ -4,7 +4,7 @@ import "./app.scss";
 import { Keypad } from "./keypad";
 
 const App = () => {
-  return <Keypad />
+    return <Keypad />;
 };
 
 export default App;
