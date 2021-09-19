@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import "./app.scss";
 import { Keypad } from "./keypad";
 
-const App = () => {
+const App = (): JSX.Element => {
     return <Keypad />;
 };
 
