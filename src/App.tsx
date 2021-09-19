@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./app.scss";
+import { Keypad } from "./keypad";
 
 const App = () => {
-  return <p>ReactTS Starter</p>;
+  return <Keypad />
 };
 
 export default App;
